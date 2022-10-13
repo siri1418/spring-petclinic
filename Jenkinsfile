@@ -1,20 +1,20 @@
 pipeline {
     agent { label 'JDK11' }
-    options { 
+   /* options { 
         timeout(time: 1, unit: 'HOURS')
     }
     triggers {
         cron('0 * * * *')
-    }
+    }*/
     stages {
         stage('Source Code') {
             steps {
-                git url: 'https://github.com/GitPracticeRepo/spring-petclinic.git', 
+                git url: 'https://github.com/saisatyateja/spring-petclinic.git', 
                 branch: 'main'
             }
             
         }
-        stage('Artifactory-Configuration') {
+       /* stage('Artifactory-Configuration') {
             steps {
                 rtMavenDeployer (
                     id: 'spc-deployer',
@@ -42,7 +42,7 @@ pipeline {
                 
                 // stash name: 'spc-build-jar', includes: 'target/*.jar'
             }
-        }
+        }*/
         stage('reporting') {
             steps {
                 junit testResults: 'target/surefire-reports/*.xml'
