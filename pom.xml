@@ -29,7 +29,20 @@
 
   </properties>
 
+    <distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>a0efqcydkokdc-artifactory-primary-0-releases</name>
+        <url>https://satya18.jfrog.io/artifactory/spring-petclinic-libs-release-local</url>
+    </repository>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>a0efqcydkokdc-artifactory-primary-0-snapshots</name>
+        <url>https://satya18.jfrog.io/artifactory/open_build-libs-snapshot-local</url>
+    </snapshotRepository>
+</distributionManagement>
   <dependencies>
+
     <!-- Spring and Spring Boot dependencies -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
@@ -104,6 +117,8 @@
       <version>${webjars-font-awesome.version}</version>
     </dependency>
     <!-- end of webjars -->
+
+
 
     <dependency>
       <groupId>org.springframework.boot</groupId>
