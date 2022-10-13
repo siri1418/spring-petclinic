@@ -29,18 +29,7 @@
 
   </properties>
 
-    <distributionManagement>
-    <repository>
-        <id>central</id>
-        <name>a0efqcydkokdc-artifactory-primary-0-releases</name>
-        <url>https://satya18.jfrog.io/artifactory/spring-petclinic-libs-release-local</url>
-    </repository>
-    <snapshotRepository>
-        <id>snapshots</id>
-        <name>a0efqcydkokdc-artifactory-primary-0-snapshots</name>
-        <url>https://satya18.jfrog.io/artifactory/open_build-libs-snapshot-local</url>
-    </snapshotRepository>
-</distributionManagement>
+   
   <dependencies>
 
     <!-- Spring and Spring Boot dependencies -->
@@ -126,6 +115,8 @@
       <optional>true</optional>
     </dependency>
   </dependencies>
+
+   
 
   <build>
     <plugins>
@@ -287,6 +278,18 @@
       </snapshots>
     </pluginRepository>
   </pluginRepositories>
+  <distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>a0efqcydkokdc-artifactory-primary-0-releases</name>
+        <url>https://satya18.jfrog.io/artifactory/spring-petclinic-libs-release-local</url>
+    </repository>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>a0efqcydkokdc-artifactory-primary-0-snapshots</name>
+        <url>https://satya18.jfrog.io/artifactory/open_build-libs-snapshot-local</url>
+    </snapshotRepository>
+</distributionManagement>
 
   <profiles>
     <profile>
